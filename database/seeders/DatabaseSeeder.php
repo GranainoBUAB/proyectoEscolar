@@ -56,5 +56,7 @@ class DatabaseSeeder extends Seeder
             'surname' => 'Duchemin',
             'email' => 'user3@gmail.com'
         ]);
+
+       
     }
 }
