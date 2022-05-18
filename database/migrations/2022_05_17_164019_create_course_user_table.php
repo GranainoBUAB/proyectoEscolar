@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('course_user', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_user');
-            $table->bigInteger('id_course');
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
+            $table->unsignedBigInteger('id_course');
+            $table->foreign('id_course')->references('id')->on('courses');
             $table->integer('notas');
             $table->integer('trimestre');
             $table->timestamps();
